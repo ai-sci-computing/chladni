@@ -1,0 +1,11 @@
+/* Extra Doxygen styling.
+   Constrain the README hero image (and any large content image) on the
+   generated pages so the 2166px contact sheet doesn't dominate the main
+   page. Small inheritance diagrams are already well under the cap, so this
+   only reins in the hero. */
+div.contents .textblock img {
+    max-width: 640px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

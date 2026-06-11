@@ -1,0 +1,54 @@
+# ---------------------------------------------------------------------------
+# Doxygen configuration for chladni
+#
+# Generate via:    cmake --build build --target docs
+# (requires -DCHLADNI_BUILD_DOCS=ON at configure time)
+#
+# This file is also valid for invoking doxygen directly from the source tree
+# during early development:    doxygen Doxyfile
+# ---------------------------------------------------------------------------
+
+PROJECT_NAME           = "chladni"
+PROJECT_NUMBER         = 0.1.0
+PROJECT_BRIEF          = "Modal sound synthesis from surface meshes"
+
+OUTPUT_DIRECTORY       = docs
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+GENERATE_HTML          = YES
+
+INPUT                  = include src README.md
+USE_MDFILE_AS_MAINPAGE = README.md
+RECURSIVE              = YES
+FILE_PATTERNS          = *.hpp *.h *.cpp *.md
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+SHOW_USED_FILES        = YES
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+JAVADOC_AUTOBRIEF      = YES
+QT_AUTOBRIEF           = YES
+MARKDOWN_SUPPORT       = YES
+TAB_SIZE               = 4
+
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = YES
+
+ALPHABETICAL_INDEX     = YES
+GENERATE_TREEVIEW      = YES
+HTML_DYNAMIC_MENUS     = YES
+
+USE_MATHJAX            = YES
+MATHJAX_RELPATH        = https://cdn.jsdelivr.net/npm/mathjax@3/es5/
+
+# Allow @cite-style references to bibliography entries kept alongside papers
+CITE_BIB_FILES         = docs/papers/references.bib
+MARKDOWN_ID_STYLE      = GITHUB
+
+QUIET                  = YES
